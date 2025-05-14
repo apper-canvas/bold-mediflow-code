@@ -1,13 +1,13 @@
 import * as Icons from 'lucide-react';
 
-export default function getIcon(iconName) {
+// Named exports for specific icons
+export const { Languages, Building2, UserCog } = Icons;
+export const Hand = Icons.HandMetal;
+
+// Utility function to get any icon by name
+export function getIcon(iconName) {
   return Icons[iconName] || Icons.Smile;
-};
-  Languages,
-  HandMetal as Hand,
-  Building2,
-  UserCog,
-  Languages,
-  Hand,
-  Building2,
-  UserCog,
+}
+
+// Export all icons for convenience
+export { Icons };
