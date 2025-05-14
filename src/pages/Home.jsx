@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
 import getIcon from '../utils/iconUtils';
 import MainFeature from '../components/MainFeature';
+import PatientFeatures from '../components/PatientFeatures';
 
 // Pre-define icons
 const MenuIcon = getIcon('Menu');
@@ -200,6 +201,9 @@ function Home({ isDarkMode, toggleDarkMode }) {
             
             {/* Main Feature Component */}
             <MainFeature />
+            
+            {/* Patient Features */}
+            <PatientFeatures />
           </div>
         </main>
       </div>

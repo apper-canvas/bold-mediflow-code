@@ -210,7 +210,7 @@ function MainFeature() {
       <div className="border-b border-surface-200 dark:border-surface-700">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between p-4 md:p-6">
           <h3 className="text-lg font-semibold text-surface-800 dark:text-surface-100 mb-3 md:mb-0">
-            Patient Appointments
+            Patient Appointment Management
           </h3>
           
           <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
@@ -324,10 +324,10 @@ function MainFeature() {
                   <CalendarIcon size={24} className="text-surface-400 dark:text-surface-500" />
                 </div>
                 <h4 className="text-lg font-medium text-surface-800 dark:text-surface-100 mb-2">No appointments found</h4>
-                <p className="text-surface-500 dark:text-surface-400 max-w-xs">
+                <p className="text-surface-500 dark:text-surface-400 max-w-sm">
                   {searchQuery 
-                    ? `No results for "${searchQuery}" with the selected filters` 
-                    : "No appointments match the selected filters"}
+                    ? `No patient appointments match "${searchQuery}" with the current filters` 
+                    : "No patient appointments match the selected filters"}
                 </p>
                 <button
                   onClick={() => {
