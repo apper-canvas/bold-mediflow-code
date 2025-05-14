@@ -161,15 +161,6 @@ function App() {
       
       <AnimatePresence mode="wait">
         <Routes>
-          <Route path="/" element={<Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
-          <Route path="*" element={<NotFound isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
-        </Routes>
-      </AnimatePresence>
-    </>
-  );
-}
-
-export default App;
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/callback" element={<Callback />} />
@@ -180,5 +171,12 @@ export default App;
           <Route path="/patients/new" element={<ProtectedRoute><PatientManagement /></ProtectedRoute>} />
           <Route path="/appointments" element={<ProtectedRoute><AppointmentManagement /></ProtectedRoute>} />
           <Route path="/appointments/new" element={<ProtectedRoute><AppointmentManagement /></ProtectedRoute>} />
+          <Route path="*" element={<NotFound isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />} />
+        </Routes>
+      </AnimatePresence>
+      
     </AuthContext.Provider>
+  );
+}
+
 export default App;
